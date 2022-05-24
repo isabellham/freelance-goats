@@ -1,5 +1,9 @@
 // Specific CSS for your home-page
+$gray: #F4F4F4;
 
+h1 {
+  color: $gray;
+}
 .container-hero {
   height: 700px;
   display: flex;
