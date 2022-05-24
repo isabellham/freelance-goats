@@ -9,5 +9,5 @@ class Goat < ApplicationRecord
   validates :gender, presence: true
   validates :description, presence: true
   validates :price, presence: true, numericality: true
-  validates :image_url, presence: true,
+  validates :image_url, presence: true
 end
