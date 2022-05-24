@@ -17,6 +17,6 @@ class GoatsController < ApplicationController
   end
 
   def goat_params
-    params.require(:goat).permit(:name, :type, :city, :breed, :gender, :description, :image_url, :price)
+    params.require(:goat).permit(:name, :type, :city, :breed, :gender, :description, :image_url, :price, :user_id)
   end
 end
