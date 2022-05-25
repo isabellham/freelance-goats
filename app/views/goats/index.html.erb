@@ -10,68 +10,32 @@
 <body>
 <div>
   <div container >
-    <h1>`We found #{goats.num} Freelance Goats for you in #{user.city}`</h1>
+    <h1>We found some nice Freelance Goats for you!</h1>
   </div>
   <div class="container">
     <div class="card">
-      <div class="card-header">
-        <img src="Image_URL" alt="GOAT 1" />
-      </div>
-      <div class="card-body">
-        <span class="tag tag-teal">Goat Type</span>
-        <h4>
-          Goat Name
-        </h4>
-        <p>
-          Goat Description
-        </p>
-        <div class="goat">
-          <div class="goat-info">
-            <h5>Goat Price</h5>
-            <small>Goat Gender</small>
+
+      <% @goats.each do |goat| %>
+        <div class="card-header">
+          <img src=<% goat.image_url %> alt="GOAT" />
+        </div>
+        <div class="card-body">
+          <span class="tag tag-teal">Type: <%= goat.goattype %></span>
+          <h4>
+            Name: <%= goat.name %>
+          </h4>
+          <p>
+            <%= goat.description %>
+          </p>
+          <div class="goat">
+            <div class="goat-info">
+              <h5><%= goat.price %> €</h5>
+              <small>Gender: <%= goat.gender %></small>
+            </div>
+
           </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="Image_URL" alt="GOAT 1" />
-      </div>
-      <div class="card-body">
-        <span class="tag tag-teal">Goat Type</span>
-        <h4>
-          Goat Name
-        </h4>
-        <p>
-          Goat Description
-        </p>
-        <div class="goat">
-          <div class="goat-info">
-            <h5>Goat Price</h5>
-            <small>Goat Gender</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="Image_URL" alt="GOAT 1" />
-      </div>
-      <div class="card-body">
-        <span class="tag tag-teal">Goat Type</span>
-        <h4>
-          Goat Name
-        </h4>
-        <p>
-          Goat Description
-        </p>
-        <div class="goat">
-          <div class="goat-info">
-            <h5>Goat Price</h5>
-            <small>Goat Gender</small>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
