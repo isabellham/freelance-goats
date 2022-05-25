@@ -1,15 +1,21 @@
-<h3>We are looking forward to a new (sexy) goat - WE ARE GOAT LOVERS</h3>
-
 <div class="container">
-<%= simple_form_for [@goat] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Loan-Mower Service-Goat Youdontwannaknow] %>
-  <%= f.input :breed %>
-  <%= f.input :gender, :label => "Gender", :collection => %w[Female Male Nonbinary Genderfluid] %>
-  <%= f.input :city %>
-  <%= f.input :price %>
-  <%= f.input :image_url %>
-  <%= f.input :description %>
-  <%= f.submit "Share the goat with the world!", class: "btn btn-primary" %>
-<% end %>
+<h3 class="d-flex justify-content-center">We are looking forward to a new (sexy) goat - WE ARE GOAT LOVERS</h3>
+
+  <div class="container">
+  <%= simple_form_for [@goat] do |f| %>
+    <div class="container d-flex row col-sm-4 justify-content-between" >
+      <%= f.input :name%>
+      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Loan-Mower Service-Goat Youdontwannaknow] %>
+      <%= f.input :breed %>
+    </div>
+    <div class="container d-flex row col-sm-3 justify-content-between">
+      <%= f.input :gender, :label => "Gender", :collection => %w[Female Male Nonbinary Genderfluid] %>
+      <%= f.input :city %>
+      <%= f.input :price %>
+      <%= f.input :image_url %>
+    </div>
+    <%= f.input :description %>
+    <%= f.submit "Share the goat with the world!", class: "btn btn-primary"%>
+  <% end %>
+  </div>
 </div>
