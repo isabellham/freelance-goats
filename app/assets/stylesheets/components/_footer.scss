@@ -1,3 +1,36 @@
-.container-navbar a {
+$gray: #737373;
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+  font-size: 0.8em;
+  margin: 20px 10px;
+}
+
+.container-footer a {
   text-decoration: none;
+  text-transform: uppercase;
+  color: $gray;
+
+}
+
+.container-footer a:active {
+  color: #e4b427;
+}
+
+.container-footer a:hover {
+  color: #1d1717;
+  text-decoration: #e4b427 underline 5px;
 }
