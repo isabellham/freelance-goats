@@ -1,5 +1,5 @@
 class GoatsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index, :show]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show, :new]
 
   def index
     @goats = policy_scope(Goat)

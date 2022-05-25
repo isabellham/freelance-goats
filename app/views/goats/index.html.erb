@@ -8,35 +8,32 @@
   <title>Goats</title>
 </head>
 <body>
-<div>
+<div class="background">
   <div container >
     <h1>We found some nice Freelance Goats for you!</h1>
   </div>
-  <div class="container">
-    <div class="card">
+  <div class="card-container">
+    <% @goats.each do |goat| %>
 
-      <% @goats.each do |goat| %>
+      <div class="card">
         <div class="card-header">
-          <img src=<% goat.image_url %> alt="GOAT" />
+          <%= link_to goat_path(goat) do %>
+            <img src=<%= goat.image_url %> alt="GOAT" />
+          <% end %>
         </div>
         <div class="card-body">
           <span class="tag tag-teal">Type: <%= goat.goattype %></span>
-          <h4>
-            Name: <%= goat.name %>
-          </h4>
-          <p>
-            <%= goat.description %>
-          </p>
+          <h4>Name: <%= goat.name %></h4>
+          <p><%= goat.description %></p>
           <div class="goat">
             <div class="goat-info">
               <h5><%= goat.price %> €</h5>
               <small>Gender: <%= goat.gender %></small>
             </div>
-
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 </body>
