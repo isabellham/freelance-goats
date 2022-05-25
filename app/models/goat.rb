@@ -1,7 +1,6 @@
 class Goat < ApplicationRecord
   has_many :bookings
   belongs_to :user
-
   # validates :name, presence: true
   # validates :goattype, presence: true
   # validates :city, presence: true
