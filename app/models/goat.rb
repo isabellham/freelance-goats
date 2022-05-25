@@ -3,7 +3,7 @@ class Goat < ApplicationRecord
   belongs_to :user
 
   validates :name, presence: true
-  validates :type, presence: true
+  validates :goattype, presence: true
   validates :city, presence: true
   validates :breed, presence: true
   validates :gender, presence: true
