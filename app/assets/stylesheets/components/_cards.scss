@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+
 .card-container {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
+
 .card-content {
   margin: 10px;
   background-color: #fff;
