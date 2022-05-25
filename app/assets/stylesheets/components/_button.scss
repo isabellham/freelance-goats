@@ -1,13 +1,13 @@
 .btn a {
   display: block;
   width: 200px;
-  height: 40px;
-  background-color: #FAC34C;
-  line-height: 40px;
+  height: 48px;
+  background-color: #4ce3fa;
+  line-height: 46px;
   font-size: 18px;
   text-decoration: none;
   color: #000000c2;
-  border: 1.5px solid #00000099;
+  border: 1.5px solid hsla(0, 0%, 0%, 0.6);
   letter-spacing: 1px;
   text-align: center;
   position: relative;
@@ -15,7 +15,7 @@
 }
 
 .btn a:hover {
-  background-color: #FAC34C;
+  background-color: #4ce3fa;
 }
 
 .btn a span{
@@ -30,7 +30,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #e2493b;
+  background: #8053ef;
   transition: all .35s;
 }
 
