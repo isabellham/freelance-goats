@@ -12,8 +12,10 @@
 }
 
 .goat-form {
-  background: rgb(254, 254, 254);
+  background: #fcfcfc70;
   border-radius: 8px;
+  padding-top: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .new-goat-header {
