@@ -1,18 +1,34 @@
-<h1><%= @goat.name %></h1>
-
-<div>
-  <img src=<%=@goat.image_url%> alt="goat">
+<div class="container-title">
+  <h1><%= @goat.name %></h1>
 </div>
 
-<div>
-  <p><%= @goat.description %></p>
-</div>
+<div class="container-main">
+  <div class="container-img">
+    <img src=<%=@goat.image_url%> alt="goat">
+  </div>
 
-<div>
-  <p>Type: <%= @goat.goattype %></p>
-  <p>Breed: <%= @goat.breed %></p>
-  <p>Gender: <%= @goat.gender %></p>
-  <p>City: <%= @goat.city %></p>
-</div>
+  <div class="container-details">
+    <div class="container-specs">
+      <h3>Type:</h3>
+      <%= @goat.goattype %>
+      <h3>Breed:</h3>
+      <%= @goat.breed %>
+      <h3>Gender:</h3>
+      <%= @goat.gender %>
+      <h3>City:</h3>
+      <%= @goat.city %>
 
-<%= link_to "Book the goat", goat_path(@goat) %>
+      <button class="btn-book-goat">
+        <%= link_to "Book the goat", goat_path(@goat) %>
+      </button>
+
+
+    </div>
+
+    <div>
+      <h2>Meet <%= @goat.name %></h2>
+      <p><%= @goat.description %></p>
+    </div>
+  </div>
+
+</div>
