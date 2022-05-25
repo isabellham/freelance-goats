@@ -1,0 +1,12 @@
+<h1>We are looking forward to a new (sexy) goat - WE ARE GOAT LOVERS</h1>
+<%= simple_form_for [@goat] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :goattype %>
+  <%= f.input :city %>
+  <%= f.input :breed %>
+  <%= f.input :gender %>
+  <%= f.input :description %>
+  <%= f.input :image_url %>
+  <%= f.input :price %>
+  <%= f.submit "Share the goat with the world!", class: "btn btn-primary" %>
+<% end %>

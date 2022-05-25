@@ -1,0 +1,47 @@
+.btn a {
+  display: block;
+  width: 200px;
+  height: 48px;
+  background-color: #4ce3fa;
+  line-height: 46px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000c2;
+  border: 1.5px solid hsla(0, 0%, 0%, 0.6);
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.btn a:hover {
+  background-color: #4ce3fa;
+}
+
+.btn a span{
+  position: relative;
+  z-index: 2;
+}
+
+.btn a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #8053ef;
+  transition: all .35s;
+}
+
+.btn a:hover{
+  color: #fff;
+}
+
+.btn a:hover:after{
+  width: 100%;
+}
+
+ul {
+  list-style: none
+}

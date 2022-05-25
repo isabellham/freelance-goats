@@ -1,14 +1,16 @@
-class BookingsController < ApplicationController
+gclass BookingsController < ApplicationController
   before_action :set_goat, only: %i[new create]
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.goat = @goat
     @booking.save
+    authorize @booking
   end
 
   private
