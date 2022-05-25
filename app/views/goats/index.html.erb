@@ -8,14 +8,14 @@
   <title>Goats</title>
 </head>
 <body>
-<div>
+<div class="background">
   <div container >
     <h1>We found some nice Freelance Goats for you!</h1>
   </div>
-  <div class="container">
+  <div class="card-container">
     <% @goats.each do |goat| %>
       <%= link_to goat_path(goat) do %>
-        <div class="card">
+        <div class="card-content">
           <div class="card-header">
             <img src=<%= goat.image_url %> alt="GOAT" />
           </div>
