@@ -1,21 +1,26 @@
-<div class="container">
-<h3 class="d-flex justify-content-center">We are looking forward to a new (sexy) goat - WE ARE GOAT LOVERS</h3>
-
-  <div class="container">
+<div class="container-hero">
+  <div class="hero-banner">
+    <h1>Share your goat with the world!</h1>
+  <div class="goat-form">
   <%= simple_form_for [@goat] do |f| %>
-    <div class="container d-flex row col-sm-4 justify-content-between" >
+    <div class="third">
       <%= f.input :name%>
-      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Loan-Mower Service-Goat Youdontwannaknow] %>
+      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Lawn-Mower Service-Goat Youdontwannaknow] %>
       <%= f.input :breed %>
     </div>
-    <div class="container d-flex row col-sm-3 justify-content-between">
+    <div class="third">
       <%= f.input :gender, :label => "Gender", :collection => %w[Female Male Nonbinary Genderfluid] %>
       <%= f.input :city %>
       <%= f.input :price %>
       <%= f.input :image_url %>
     </div>
-    <%= f.input :description %>
-    <%= f.submit "Share the goat with the world!", class: "btn btn-primary"%>
+    <div class="third">
+      <%= f.input :description %>
+    </div>
+    <div class="third">
+      <%= f.submit "Share the goat with the world!", class: "btn btn-primary goat-button"%>
+    </div>
   <% end %>
   </div>
+</div>
 </div>
