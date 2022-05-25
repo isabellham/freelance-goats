@@ -5,8 +5,8 @@
   <%= simple_form_for [@goat] do |f| %>
     <div class="third">
       <%= f.input :name%>
-      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Loan-Mower Service-Goat Youdontwannaknow]%>
-      <%= f.input :breed%>
+      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Lawn-Mower Service-Goat Youdontwannaknow] %>
+      <%= f.input :breed %>
     </div>
     <div class="third">
       <%= f.input :gender, :label => "Gender", :collection => %w[Female Male Nonbinary Genderfluid] %>
