@@ -1,5 +1,4 @@
 .third {
-  background: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -10,6 +9,11 @@
 
 .third > *{
   flex: 1;
+}
+
+.goat-form {
+  background: rgb(254, 254, 254);
+  border-radius: 8px;
 }
 
 .new-goat-header {
