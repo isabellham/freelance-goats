@@ -19,7 +19,7 @@ goat = Goat.new(
 )
 goat.save
 
-goat = Goat.new(
+goat2 = Goat.new(
   name: "Pats",
   city: "Durham",
   breed: "English Goofy",
@@ -30,9 +30,9 @@ goat = Goat.new(
   goattype: "yoga",
   user_id: 1
 )
-goat.save
+goat2.save
 
-goat = Goat.new(
+goat3 = Goat.new(
   name: "Slippin Jimmy",
   city: "Tennese",
   breed: "Canadian Walgroove",
@@ -43,9 +43,9 @@ goat = Goat.new(
   goattype: "cuddle",
   user_id: 1
 )
-goat.save
+goat3.save
 
-goat = Goat.new(
+goat4 = Goat.new(
   name: "Gottfried",
   city: "Munich",
   breed: "German Wooly",
@@ -56,4 +56,6 @@ goat = Goat.new(
   goattype: "Lawn-Mower",
   user_id: 1
 )
-goat.save
+goat4.save
+
+puts "Seeding finished"
