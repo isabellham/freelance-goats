@@ -1,0 +1,12 @@
+.container-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.container-img img {
+  max-width: 450px;
+  max-height: 680px;
+  object-fit: cover;
+}
