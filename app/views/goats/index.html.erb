@@ -14,24 +14,24 @@
   </div>
   <div class="container">
     <% @goats.each do |goat| %>
-      <%= link_to goat_path(goat) do %>
-        <div class="card">
-          <div class="card-header">
+      <div class="card">
+        <div class="card-header">
+          <%= link_to goat_path(goat) do %>
             <img src=<%= goat.image_url %> alt="GOAT" />
-          </div>
-          <div class="card-body">
-            <span class="tag tag-teal">Type: <%= goat.goattype %></span>
-            <h4>Name: <%= goat.name %></h4>
-            <p><%= goat.description %></p>
-            <div class="goat">
-              <div class="goat-info">
-                <h5><%= goat.price %> €</h5>
-                <small>Gender: <%= goat.gender %></small>
-              </div>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <span class="tag tag-teal">Type: <%= goat.goattype %></span>
+          <h4>Name: <%= goat.name %></h4>
+          <p><%= goat.description %></p>
+          <div class="goat">
+            <div class="goat-info">
+              <h5><%= goat.price %> €</h5>
+              <small>Gender: <%= goat.gender %></small>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>
