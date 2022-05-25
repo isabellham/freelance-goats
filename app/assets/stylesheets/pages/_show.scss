@@ -1,12 +1,18 @@
 .container-main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 24px;
 }
 
 .container-img img {
-  max-width: 450px;
-  max-height: 680px;
+  height: 600px;
+  width: 400px;
   object-fit: cover;
+  border-radius: 20px;
+}
+
+.container-title {
+  padding-left: 200px;
+  padding-top: 30px;
 }

@@ -9,11 +9,20 @@
 
   <div class="container-details">
     <div class="container-specs">
-      <p>Type: <%= @goat.goattype %></p>
-      <p>Breed: <%= @goat.breed %></p>
-      <p>Gender: <%= @goat.gender %></p>
-      <p>City: <%= @goat.city %></p>
-      <%= link_to "Book the goat", goat_path(@goat) %>
+      <h3>Type:</h3>
+      <%= @goat.goattype %>
+      <h3>Breed:</h3>
+      <%= @goat.breed %>
+      <h3>Gender:</h3>
+      <%= @goat.gender %>
+      <h3>City:</h3>
+      <%= @goat.city %>
+
+      <button class="btn-book-goat">
+        <%= link_to "Book the goat", goat_path(@goat) %>
+      </button>
+
+
     </div>
 
     <div>

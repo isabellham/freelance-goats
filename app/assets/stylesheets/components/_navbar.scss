@@ -13,7 +13,7 @@ $text: #1d1717;
   flex-direction: row;
 }
 
-ul {
+.container-navbar ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,16 +29,16 @@ ul {
   font-weight: bold;
 }
 
- a {
+.container-navbar a {
    text-decoration: none;
    color: $text;
  }
 
- a:active {
+ .container-navbar a:active {
    color: #e4b427;
  }
 
- a:hover {
+ .container-navbar a:hover {
    color: #1d1717;
    text-decoration: #e4b427 underline 5px;
  }
