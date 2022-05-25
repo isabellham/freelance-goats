@@ -12,10 +12,19 @@
 @import "pages/index";
 @import "components/cards";
 @import "components/navbar";
+@import "components/footer";
 @import "pages/show";
 
 h1 {
   font-family: 'Bangers', cursive;
-  font-size: 4em;
+  font-size: 2em;
   color: #1d1717;
+}
+
+h2, h3, h4, p {
+  font-family: 'Chivo', sans-serif;
+}
+
+.notice {
+  margin: 0;
 }
