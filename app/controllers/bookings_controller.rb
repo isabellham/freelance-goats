@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:home]
   before_action :set_goat, only: %i[new create]
 
   def new
