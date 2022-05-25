@@ -22,7 +22,6 @@ gclass BookingsController < ApplicationController
   def set_goat
     @goat = Goat.find(params[:goat_id])
   end
-
   # def set_restaurant
   #   @restaurant = Restaurant.find(params[:restaurant_id])
   # end
