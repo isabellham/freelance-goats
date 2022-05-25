@@ -1,3 +1,5 @@
+$text: #1d1717;
+
 .container-navbar {
   display: flex;
   flex-direction: row;
@@ -5,3 +7,38 @@
   align-items: center;
   padding: 0 80px;
 }
+
+.container-items {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-right: 16px;
+  align-self: center;
+  font-family: 'Chivo', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ a {
+   text-decoration: none;
+   color: $text;
+ }
+
+ a:active {
+   color: #e4b427;
+ }
+
+ a:hover {
+   color: #1d1717;
+   text-decoration: #e4b427 underline 5px;
+ }
