@@ -1,36 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-
-.card-container {
-  justify-content: center;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  width: 80%;
-  margin: 0 auto;
+.container-h1 h1 {
+  text-align: left;
+  padding: 80px 80px 40px 110px;
 }
 
-.card-content {
-  margin: 10px;
+.container-cards h2 {
+  color: #8053ef;
+  font-family: 'Lilita One', cursive;
+}
+
+.container-cards {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  display: grid;
+  place-items: center;
+  padding: 0 80px;
+}
+
+.container-cards a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 32px;
+}
+
+.card {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   overflow: hidden;
-  width: 300px;
+  width: 350px;
 }
-.card-header img {
+
+.card-img img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
-  min-height: 250px;
+  // padding: 20px;
 }
 
 .tag {
@@ -43,42 +54,31 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .tag-teal {
-  background-color: #47bcd4;
+  background-color: #4ce3fa;
 }
+
 .tag-purple {
-  background-color: #5e76bf;
+  background-color: #8053ef;
 }
+
 .tag-pink {
   background-color: #cd5b9f;
 }
+
 .tag-yellow {
   background-color: palegoldenrod;
 }
+
 .tag-green {
   background-color: palegreen
 }
+
 .tag-orange {
   background-color: peru;
 }
-.card-body p {
-  font-size: 13px;
-  margin: 0 0 40px;
-}
-.user {
-  display: flex;
-  margin-top: auto;
-}
 
-.user img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-.user-info h5 {
-  margin: 0;
-}
-.user-info small {
-  color: #545d7a;
+.card-body p {
+  font-size: 16px;
 }
