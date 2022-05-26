@@ -11,6 +11,7 @@ class GoatsController < ApplicationController
 
   def show
     @goat = Goat.find(params[:id])
+    @booking = Booking.new
     authorize @goat
   end
 
