@@ -1,46 +1,42 @@
-<div class="container-main">
-  <div class="container-img">
-    <% if @goat.photo.attached? %>
-      <%= cl_image_tag(@goat.photo.key) %>
-    <% else %>
-      <%= image_tag('goat-placeholder.png') %>
-    <% end %>
-  </div>
+<div class="container-img">
+  <% if @goat.photo.attached? %>
+    <%= cl_image_tag(@goat.photo.key) %>
+  <% else %>
+    <%= image_tag('goat-placeholder.png') %>
+  <% end %>
+</div>
 
-  <div class="container-details">
-    <div class="container-specs">
-      <h3>Type:</h3>
-      <%= @goat.goattype %>
-      <h3>Breed:</h3>
-      <%= @goat.breed %>
-      <h3>Gender:</h3>
-      <%= @goat.gender %>
-      <h3>City:</h3>
-      <%= @goat.city %>
-      <div>
-        <h2>Meet <%= @goat.name %></h2>
-        <p><%= @goat.description %></p>
-      </div>
-      <div class="container-button">
-        <% if current_user == @goat.user %>
-          <button class="btn-book-goat">
-            <%= link_to "Delete goat", goat_path(@goat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          </button>
-        <% end %>
-      </div>
+<div class="container-details">
+  <div class="goat-details">
+    <h2><%= @goat.name %></h2>
+    <%= @goat.goattype %>
+    <h3>Breed:</h3>
+    <p><%= @goat.breed %></p>
+    <h3>Gender:</h3>
+    <p><%= @goat.gender %></p>
+    <h3>City:</h3>
+    <p><%= @goat.city %></p>
+    <div>
+      <p><%= @goat.description %></p>
     </div>
-  </div>
-
-  <div class='container-booking'>
-    <h3>Book this Goat</h3>
-    <div class='booking-form'>
-      <%= simple_form_for [@goat, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, html5: true %>
-        <%= f.input :end_date, as: :date, html5: true  %>
-        <h4>€<%= @goat.price %> per day</h4>
-        <%= f.button :submit %>
+    <div class="container-button">
+      <% if current_user == @goat.user %>
+        <button class="btn-book-goat">
+          <%= link_to "Delete goat", goat_path(@goat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </button>
       <% end %>
     </div>
   </div>
+</div>
 
+<div class='container-booking'>
+  <h3>Book this Goat</h3>
+  <div class='booking-form'>
+    <%= simple_form_for [@goat, @booking] do |f| %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true  %>
+      <h4>€<%= @goat.price %> per day</h4>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
 </div>
