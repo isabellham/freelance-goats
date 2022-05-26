@@ -2,11 +2,16 @@ class GoatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show, :new, :destroy]
 
   def index
-    @goats = policy_scope(Goat)
+    if params[:query].present?
+      @goats = policy_scope(Goat.where("goattype ILIKE ?", "%#{params[:query]}%"))
+    else
+      @goats = policy_scope(Goat)
+    end
   end
 
   def show
     @goat = Goat.find(params[:id])
+    @booking = Booking.new
     authorize @goat
   end
 

@@ -1,6 +1,3 @@
-$text: #1d1717;
-$gray: #737373;
-
 .container-navbar {
   display: flex;
   flex-direction: row;
@@ -31,16 +28,18 @@ $gray: #737373;
 
 .container-navbar a {
    text-decoration: none;
-   color: $gray;
+   color: #8053EF;
+   font-weight: bold;
  }
 
  .container-navbar a:active {
-   color: #e4b427;
+   color: #F15687;
  }
 
  .container-navbar a:hover {
    color: #1d1717;
-   text-decoration: #e4b427 underline 5px;
+   text-decoration: #F15687 underline 5px;
+   transition: all .35s;
  }
 
  .navbar-logo {
