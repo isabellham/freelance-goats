@@ -5,17 +5,20 @@
 }
 
 .main-container {
-  display: flex;
+  display: inline-grid;
   flex-direction: row;
   justify-content: space-around;
   padding: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .container-details {
   display: flex;
+  grid-column: 1 / span 2;
   flex-direction: column;
   justify-content: space-around;
   padding: 24px 80px;
+  flex-basis: 2em;
 }
 
 .container-details h1 {
@@ -62,4 +65,13 @@
   width: 200px;
   height: 48px;
   margin-bottom: 24px;
+}
+
+
+// BOOKING FORM
+.container-booking {
+  background-color: #e2e4e8;
+  grid-column: 3 / span 1;
+  border-radius: 20px;
+  padding: 30px;
 }
