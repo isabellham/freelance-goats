@@ -9,8 +9,8 @@
 }
 
 .container-cards {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
   display: grid;
   place-items: center;
   padding: 0 80px;
