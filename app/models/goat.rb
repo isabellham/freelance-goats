@@ -1,6 +1,7 @@
 class Goat < ApplicationRecord
   has_many :bookings
   belongs_to :user
+  has_one_attached :photo
   # validates :name, presence: true
   # validates :goattype, presence: true
   # validates :city, presence: true

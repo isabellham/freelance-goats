@@ -4,7 +4,11 @@
 
 <div class="container-main">
   <div class="container-img">
-    <img src=<%=@goat.image_url%> alt="goat">
+    <% if @goat.photo.attached? %>
+      <%= cl_image_tag(@goat.photo.key) %>
+    <% else %>
+      <%= image_tag('goat-placeholder.png') %>
+    <% end %>
   </div>
 
   <div class="container-details">
@@ -21,14 +25,10 @@
       <button class="btn-book-goat">
         <%= link_to "Book the goat", goats_path %>
       </button>
-    <div>
-      <h2>Meet <%= @goat.name %></h2>
-      <p><%= @goat.description %></p>
+      <div>
+        <h2>Meet <%= @goat.name %></h2>
+        <p><%= @goat.description %></p>
+      </div>
     </div>
-    </div>
-
-    </div>
-
   </div>
-
 </div>
