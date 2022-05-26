@@ -1,5 +1,5 @@
 class GoatsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index, :show, :new]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show, :new, :destroy]
 
   def index
     @goats = policy_scope(Goat)
@@ -11,6 +11,7 @@ class GoatsController < ApplicationController
   end
 
   def new
+    redirect_to new_user_registration_path unless current_user
     @goat = Goat.new
     authorize @goat
   end
@@ -27,6 +28,7 @@ class GoatsController < ApplicationController
     @goat = Goat.find(params[:id])
     @goat.destroy
     redirect_to goats_path, status: :see_other
+    authorize @goat
   end
 
   def goat_params
