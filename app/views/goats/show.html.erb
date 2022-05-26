@@ -1,7 +1,3 @@
-<div class="container-title">
-  <h1><%= @goat.name %></h1>
-</div>
-
 <div class="container-main">
   <div class="container-img">
     <% if @goat.photo.attached? %>
@@ -10,26 +6,30 @@
       <%= image_tag('goat-placeholder.png') %>
     <% end %>
   </div>
-
-  <div class="container-details">
-    <div class="container-specs">
-      <h3>Type:</h3>
-      <%= @goat.goattype %>
-      <h3>Breed:</h3>
-      <%= @goat.breed %>
-      <h3>Gender:</h3>
-      <%= @goat.gender %>
-      <h3>City:</h3>
-      <%= @goat.city %>
-      <div class="container-button">
-        <button class="btn-book-goat">
-          <%= link_to "Book the goat", goat_path(@goat) %>
-        </button>
-      </div>
+  <div class="container-description">
+    <div class="container-title">
+      <h1><%= @goat.name %></h1>
     </div>
-    <div>
-      <h2>Meet <%= @goat.name %></h2>
-      <p><%= @goat.description %></p>
+    <div class="container-details">
+      <div class="container-specs">
+        <h3>Type:</h3>
+        <%= @goat.goattype %>
+        <h3>Breed:</h3>
+        <%= @goat.breed %>
+        <h3>Gender:</h3>
+        <%= @goat.gender %>
+        <h3>City:</h3>
+        <%= @goat.city %>
+        <div class="container-button">
+          <button class="btn-book-goat">
+            <%= link_to "Book the goat", goat_path(@goat) %>
+          </button>
+        </div>
+      </div>
+      <div>
+        <h2>Meet <%= @goat.name %></h2>
+        <p><%= @goat.description %></p>
+      </div>
     </div>
   </div>
 </div>

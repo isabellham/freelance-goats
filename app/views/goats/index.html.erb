@@ -6,9 +6,9 @@
   <% @goats.each do |goat| %>
     <%= link_to goat_path(goat) do %>
       <div class="card">
-        <div class="card-header">
+        <div class="container-img-goat">
           <%= link_to goat_path(goat) do %>
-            <%= cl_image_tag(goat.photo.key) %>
+            <%= cl_image_tag(goat.photo.key, :alt=>"Goat picture", :class=>"img-goat") %>
           <% end %>
         </div>
         <div class="container-goats">
@@ -24,6 +24,4 @@
       </div>
     <% end %>
   <% end %>
-  </div>
-</body>
-</html>
+</div>

@@ -9,8 +9,8 @@
 }
 
 .container-cards {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1px;
   display: grid;
   place-items: center;
   padding: 0 80px;
@@ -24,5 +24,4 @@
 .container-cards a {
   text-decoration: none;
   color: inherit;
-  padding-bottom: 32px;
 }
