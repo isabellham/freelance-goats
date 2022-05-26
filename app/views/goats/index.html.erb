@@ -1,40 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container-h1">
+  <h1>We found some nice freelance goats for you</h1>
+</div>
 
-  <title>Goats</title>
-</head>
-<body>
-<div class="background">
-  <div container >
-    <h1>We found some nice Freelance Goats for you!</h1>
-  </div>
-  <div class="card-container">
-    <% @goats.each do |goat| %>
-
+<div class="container-cards">
+  <% @goats.each do |goat| %>
+    <%= link_to goat_path(goat) do %>
       <div class="card">
         <div class="card-header">
           <%= link_to goat_path(goat) do %>
             <%= cl_image_tag(goat.photo.key) %>
           <% end %>
         </div>
-        <div class="card-body">
-          <span class="tag tag-teal">Type: <%= goat.goattype %></span>
-          <h4>Name: <%= goat.name %></h4>
-          <p><%= goat.description %></p>
-          <div class="goat">
-            <div class="goat-info">
-              <h5><%= goat.price %> €</h5>
-              <small>Gender: <%= goat.gender %></small>
-            </div>
+        <div class="container-goats">
+          <div class="goat-card-header">
+            <h5><%= goat.goattype %></h5>
+            <h2><%= goat.name %></h2>
+          </div>
+          <div class="card-details">
+            <h4><%= goat.city %></h4>
+            <h3>€ <%= goat.price %></h3>
           </div>
         </div>
       </div>
     <% end %>
+  <% end %>
   </div>
-</div>
 </body>
 </html>

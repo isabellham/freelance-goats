@@ -1,4 +1,5 @@
 $text: #1d1717;
+$gray: #737373;
 
 .container-navbar {
   display: flex;
@@ -17,21 +18,20 @@ $text: #1d1717;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 16px;
+  padding: 24px 0;
   align-items: center;
+  margin: 0;
 }
 
 .navbar-item {
   margin-right: 16px;
   align-self: center;
-  font-family: 'Chivo', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .container-navbar a {
    text-decoration: none;
-   color: $text;
+   color: $gray;
  }
 
  .container-navbar a:active {
@@ -44,6 +44,6 @@ $text: #1d1717;
  }
 
  .navbar-logo {
-   width: 30px;
-   height: 30px;
+   width: 60px;
+   height: 60px;
  }

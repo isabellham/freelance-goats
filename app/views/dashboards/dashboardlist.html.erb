@@ -1,0 +1,15 @@
+<h2>Here are our bookings</h2>
+
+<ol>
+  <% @bookings.each do |booking| %>
+    <li><%= "#{booking.goat.name} #{booking.start_date} - #{booking.end_date}" %></li>
+  <% end %>
+</ol>
+
+<h2>Here are our goats</h2>
+
+<ol>
+  <% @goats.each do |goat| %>
+    <li><%= "#{goat.name} #{goat.gender} #{goat.goattype}" %></li>
+  <% end %>
+</ol>
