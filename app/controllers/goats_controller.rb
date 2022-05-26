@@ -23,6 +23,12 @@ class GoatsController < ApplicationController
     authorize @goat
   end
 
+  def destroy
+    @goat = Goat.find(params[:id])
+    @goat.destroy
+    redirect_to goats_path, status: :see_other
+  end
+
   def goat_params
     params.require(:goat).permit(:name, :goattype, :city, :breed, :gender, :description, :photo, :price)
   end
