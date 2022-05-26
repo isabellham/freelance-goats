@@ -2,23 +2,23 @@
   <h1>We found some nice freelance goats for you</h1>
 </div>
 
-<%= form_tag goats_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search for you favourite goat type (party, cuddle, yoga, etc...)"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<div class="container-search">
+  <%= form_tag goats_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for you favourite goat type (party, cuddle, yoga, etc...)"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
 <div class="container-cards">
   <% @goats.each do |goat| %>
     <%= link_to goat_path(goat) do %>
       <div class="card">
-        <div class="card-header">
-          <%= link_to goat_path(goat) do %>
-            <%= cl_image_tag(goat.photo.key) %>
-          <% end %>
+        <div class="container-img-goat">
+          <%= cl_image_tag(goat.photo.key, :alt=>"Goat picture", :class=>"img-goat") %>
         </div>
         <div class="container-goats">
           <div class="goat-card-header">
@@ -33,6 +33,4 @@
       </div>
     <% end %>
   <% end %>
-  </div>
-</body>
-</html>
+</div>
