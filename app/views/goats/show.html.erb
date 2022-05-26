@@ -2,23 +2,27 @@
   <% if @goat.photo.attached? %>
     <%= cl_image_tag(@goat.photo.key) %>
   <% else %>
-    <%= image_tag('goat-placeholder.png') %>
+    <%= image_tag('placeholder-goat.jpg') %>
   <% end %>
 </div>
 
-<div class="container-details">
-  <div class="goat-details">
-    <h2><%= @goat.name %></h2>
-    <%= @goat.goattype %>
-    <h3>Breed:</h3>
-    <p><%= @goat.breed %></p>
-    <h3>Gender:</h3>
-    <p><%= @goat.gender %></p>
-    <h3>City:</h3>
-    <p><%= @goat.city %></p>
-    <div>
+<div class="main-container">
+  <div class="container-details">
+    <h1><%= @goat.name %></h1>
+    <div class="goat-details-header">
+      <h3><%= @goat.goattype %> • </h3>
+      <h3><%= @goat.breed %> • </h3>
+      <h3><%= @goat.gender %></h3>
+    </div>
+    <div class="goat-details-location">
+      <%= image_tag('pin.png') %>
+      <h2><%= @goat.city %></h2>
+    </div>
+
+    <div class="goat-details-description">
       <p><%= @goat.description %></p>
     </div>
+
     <div class="container-button">
       <% if current_user == @goat.user %>
         <button class="btn-book-goat">
@@ -27,16 +31,16 @@
       <% end %>
     </div>
   </div>
-</div>
 
-<div class='container-booking'>
-  <h3>Book this Goat</h3>
-  <div class='booking-form'>
-    <%= simple_form_for [@goat, @booking] do |f| %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true  %>
-      <h4>€<%= @goat.price %> per day</h4>
-      <%= f.button :submit %>
-    <% end %>
+  <div class='container-booking'>
+    <h3>Book this Goat</h3>
+    <div class='booking-form'>
+      <%= simple_form_for [@goat, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true  %>
+        <h4>€<%= @goat.price %> per day</h4>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
   </div>
 </div>

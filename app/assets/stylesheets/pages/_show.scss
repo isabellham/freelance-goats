@@ -1,20 +1,14 @@
-
-.container-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 24px;
-}
-
 .container-img img {
   height: 400px;
   width: 1440px;
   object-fit: cover;
 }
 
-.container-title {
-  padding-left: 200px;
-  padding-top: 30px;
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 24px;
 }
 
 .container-details {
@@ -24,11 +18,44 @@
   padding: 24px 80px;
 }
 
-.container-details h2 {
+.container-details h1 {
   font-family: 'Lilita One', cursive;
-  font-size: 3em;
-  color: #F15687;
-  filter: drop-shadow(3px 3px #1d1717);
+  font-size: 4em;
+  color: #1d1717;
+  filter: drop-shadow(3px 3px #F15687);
+}
+
+.goat-details-header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px 0;
+}
+
+.goat-details-header h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 2px;
+}
+
+.goat-details-location {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+}
+
+.goat-details-location h2 {
+  font-size: 1.2em;
+  margin: 2px;
+}
+
+.goat-details-location img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.goat-details-description p {
+  padding: 32px 0;
+  font-size: 1.3em;
 }
 
 .input [type="submit"] {
