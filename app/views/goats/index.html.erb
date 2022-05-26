@@ -2,6 +2,15 @@
   <h1>We found some nice freelance goats for you</h1>
 </div>
 
+<%= form_tag goats_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search for you favourite goat type (party, cuddle, yoga, etc...)"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="container-cards">
   <% @goats.each do |goat| %>
     <%= link_to goat_path(goat) do %>
