@@ -17,24 +17,8 @@
   padding-top: 30px;
 }
 
-.btn-book-goat {
-  background-color: #8053ef;
-  font-size: 18px;
-  text-decoration: none;
-  color: #000000c2;
-  border: 1.5px solid hsla(0, 0%, 0%, 0.6);
-  letter-spacing: 1px;
-  text-align: center;
-  transition: all .35s;
-}
-
-.btn-book-goat a {
-  text-decoration: none;
-  color: #000000c2;
-}
-
-.btn-book-goat a:hover {
-  text-decoration: none;
-  color: #FFFFFF;
-  transition: all .35s;
+.input [type="submit"] {
+  width: 200px;
+  height: 48px;
+  margin-bottom: 24px;
 }
