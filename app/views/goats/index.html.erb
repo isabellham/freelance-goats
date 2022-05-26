@@ -6,16 +6,19 @@
   <% @goats.each do |goat| %>
     <%= link_to goat_path(goat) do %>
       <div class="card">
-        <div class="card-img">
-            <img src=<%= goat.image_url %> alt="Goat picture"/>
+        <div class="card-header">
+          <%= link_to goat_path(goat) do %>
+            <%= cl_image_tag(goat.photo.key) %>
+          <% end %>
         </div>
-        <div class="card-body">
-          <h2><%= goat.name %></h2>
-          <div class="container-goat-details">
-            <div class="goat-info">
-              <small><%= goat.gender %></small>
-              <h3><%= goat.price %> €</h3>
-            </div>
+        <div class="container-goats">
+          <div class="goat-card-header">
+            <h5><%= goat.goattype %></h5>
+            <h2><%= goat.name %></h2>
+          </div>
+          <div class="card-details">
+            <h4><%= goat.city %></h4>
+            <h3>€ <%= goat.price %></h3>
           </div>
         </div>
       </div>
