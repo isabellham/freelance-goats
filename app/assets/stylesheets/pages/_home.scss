@@ -23,3 +23,16 @@ $gray: #F4F4F4;
   justify-content: center;
   align-items: center;
 }
+
+.container-booking {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border: 3px;
+  border-color: black;
+  border-radius: 10px;
+}

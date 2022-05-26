@@ -33,4 +33,16 @@
 
   </div>
 
+  <div class='container-booking'>
+    <h3>Book this Goat</h3>
+    <div class='booking-form'>
+      <%= simple_form_for [@goat, @booking] do |f| %>
+        <div class='narrow-form'>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true  %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
