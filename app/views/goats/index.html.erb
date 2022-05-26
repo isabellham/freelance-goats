@@ -6,8 +6,10 @@
   <% @goats.each do |goat| %>
     <%= link_to goat_path(goat) do %>
       <div class="card">
-        <div class="card-img">
-            <img src=<%= goat.image_url %> alt="Goat picture"/>
+        <div class="card-header">
+          <%= link_to goat_path(goat) do %>
+            <%= cl_image_tag(goat.photo.key) %>
+          <% end %>
         </div>
         <div class="container-goats">
           <div class="goat-card-header">
