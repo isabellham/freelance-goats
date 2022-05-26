@@ -21,15 +21,17 @@
       <%= @goat.gender %>
       <h3>City:</h3>
       <%= @goat.city %>
-      <%# <div class="container-button">
-        <button class="btn-book-goat">
-          <%= link_to "Book the goat", goat_path(@goat) %>
-        <%# </button>
-      </div> %>
-    </div>
-    <div>
-      <h2>Meet <%= @goat.name %></h2>
-      <p><%= @goat.description %></p>
+      <div>
+        <h2>Meet <%= @goat.name %></h2>
+        <p><%= @goat.description %></p>
+      </div>
+      <div class="container-button">
+        <% if current_user == @goat.user %>
+          <button class="btn-book-goat">
+            <%= link_to "Delete goat", goat_path(@goat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </button>
+        <% end %>
+      </div>
     </div>
   </div>
 
