@@ -1,7 +1,8 @@
-<h1>Congratulations! You have successfully booked <%= @booking.goat.name %></h1>
+<h1>Booking Details</h1>
+<h2>Congratulations! You have successfully booked <%= @booking.goat.name %></h2>
 
-<% @length = @booking.end_date - @booking.start_date   %>
+<% @length = (@booking.end_date - @booking.start_date).to_i   %>
 
-<h2>Your booking on <%= @booking.start_date %> is for <%= @length %> days</h2>
-<h2>The total cost of your booking is € <%= @length * @booking.goat.price %></h2>
-<h2> Your Booking Number is <%= @booking.id %></h2>
+<h3>Your booking on <%= @booking.start_date %> is for <%= @length %> days</h3>
+<h3>The total cost of your booking is € <%= @length * @booking.goat.price %></h3>
+<h3> Your Booking Number is <%= @booking.id %></h3>

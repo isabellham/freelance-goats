@@ -21,11 +21,11 @@
       <%= @goat.gender %>
       <h3>City:</h3>
       <%= @goat.city %>
-      <div class="container-button">
+      <%# <div class="container-button">
         <button class="btn-book-goat">
           <%= link_to "Book the goat", goat_path(@goat) %>
-        </button>
-      </div>
+        <%# </button>
+      </div> %>
     </div>
     <div>
       <h2>Meet <%= @goat.name %></h2>
@@ -37,9 +37,9 @@
     <h3>Book this Goat</h3>
     <div class='booking-form'>
       <%= simple_form_for [@goat, @booking] do |f| %>
-        <div class='narrow-form'>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true  %>
+        <h4>€<%= @goat.price %> per day</h4>
         <%= f.button :submit %>
       <% end %>
     </div>

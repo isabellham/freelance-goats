@@ -17,7 +17,9 @@
     <%= render 'components/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= render 'components/footer' %>
+    <div class="content-wrapper">
+      <%= yield %>
+      <%= render 'components/footer' %>
+    </div>
   </body>
 </html>
