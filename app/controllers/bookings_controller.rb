@@ -11,7 +11,14 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.goat = @goat
+    @booking.user = current_user
     @booking.save
+    authorize @booking
+    redirect_to booking_path(@booking)
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 

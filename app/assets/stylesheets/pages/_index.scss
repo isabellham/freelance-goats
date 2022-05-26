@@ -2,16 +2,27 @@
 @import "home";
 @import "new";
 
-h1 {
-  color: black;
-  text-align: center
-};
-
-.background {
-  background-image: url("https://images.unsplash.com/photo-1529864539815-de90220aedfb?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938");
+.container-h1 h1 {
+  text-align: left;
+  padding: 80px 80px 40px 80px;
+  color: #404040;
 }
 
-.card-container {
-  backdrop-filter: blur(10px);
-  background: #fcfcfc70;
+.container-cards {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  display: grid;
+  place-items: center;
+  padding: 0 80px;
+}
+
+.container-cards h2 {
+  color: #8053ef;
+  font-family: 'Lilita One', cursive;
+}
+
+.container-cards a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 32px;
 }
