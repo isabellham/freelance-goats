@@ -8,8 +8,9 @@
   display: inline-grid;
   flex-direction: row;
   justify-content: space-around;
-  padding: 24px;
+  // padding: 24px;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 24px 80px;
 }
 
 .container-details {
@@ -17,7 +18,7 @@
   grid-column: 1 / span 2;
   flex-direction: column;
   justify-content: space-around;
-  padding: 24px 80px;
+  // padding: 24px 80px;
   flex-basis: 2em;
 }
 
@@ -57,21 +58,54 @@
 }
 
 .goat-details-description p {
-  padding: 32px 0;
+  padding: 32px 40px 32px 0;
   font-size: 1.3em;
 }
-
-.input [type="submit"] {
-  width: 200px;
-  height: 48px;
-  margin-bottom: 24px;
-}
-
 
 // BOOKING FORM
 .container-booking {
   background-color: #e2e4e8;
   grid-column: 3 / span 1;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 30px;
+}
+
+.container-booking h3 {
+  font-family: 'Lilita One', cursive;
+  font-size: 2em;
+  color: #1d1717;
+  text-transform: uppercase;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.form-wrapper h4 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#per-day {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.container-booking input {
+  margin-left: 0;
+}
+
+.container-booking .form-label {
+  padding-left: 6px;
 }

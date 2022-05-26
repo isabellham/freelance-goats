@@ -38,8 +38,10 @@
       <%= simple_form_for [@goat, @booking] do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true  %>
-        <h4>€<%= @goat.price %> per day</h4>
-        <%= f.button :submit %>
+        <div class="form-wrapper">
+          <h4>€<%= @goat.price %> <span id="per-day">per day</span></h4>
+          <%= f.button :submit, class: "btn-book-goat" %>
+        </div>
       <% end %>
     </div>
   </div>
