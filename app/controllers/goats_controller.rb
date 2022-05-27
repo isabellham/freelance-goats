@@ -1,5 +1,5 @@
 class GoatsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :index, :show, :new, :destroy]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
     if params[:query].present?
