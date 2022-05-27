@@ -86,3 +86,21 @@ margin: auto 0;
   object-fit: cover;
   margin: 0;
 }
+
+.container-dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto 0;
+  }
+
+.card-dashboard {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 500px;
+  height: 100vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.047), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 50px;
+}
