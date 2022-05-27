@@ -1,20 +1,21 @@
 <div class="container-dashboard">
   <div class="card-dashboard">
 
-    <h2>Here are our bookings</h2>
+    <h2>Here are your bookings</h2>
 
-    <ol>
+    <ul class="dashboard-ul">
       <% @bookings.each do |booking| %>
-        <li><%= link_to "#{booking.goat.name} #{booking.start_date} - #{booking.end_date}" , booking_path(booking) %></li>
+        <li><%= link_to "→ #{booking.goat.name} #{booking.start_date} - #{booking.end_date}" , booking_path(booking) %></li>
       <% end %>
-    </ol>
+    </ul>
   </div>
   <div class="card-dashboard">
-    <h2>Here are our goats</h2>
+    <h2>Here are your goats</h2>
 
-    <ol>
+    <ul class="dashboard-ul">
       <% @goats.each do |goat| %>
-        <li><%= link_to "#{goat.name} #{goat.gender} #{goat.goattype}", goat_path(goat) %></li>
+        <li><%= link_to "→ #{goat.name}: #{goat.gender}, #{goat.goattype}", goat_path(goat) %></li>
       <% end %>
+    </ul>
   </div>
 </div>

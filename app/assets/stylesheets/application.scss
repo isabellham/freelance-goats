@@ -29,3 +29,36 @@ body {
 .notice {
   margin: 0;
 }
+
+.container-dashboard {
+  padding: 24px 80px;
+}
+
+.container-dashboard h2 {
+  font-family: 'Lilita One', cursive;
+  font-size: 2em;
+  color: #1d1717;
+  filter: drop-shadow(1px 1px #F15687);
+  padding-bottom: 16px;;
+}
+
+.card-dashboard a {
+  text-decoration: none;
+  color: #1d1717;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 16px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.card-dashboard a:hover {
+  text-decoration: #F15687 underline 5px;
+  transition: all .35s;
+}
+
+.card-dashboard ul {
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 8px;
+}
