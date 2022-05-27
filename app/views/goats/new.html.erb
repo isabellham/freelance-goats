@@ -12,7 +12,7 @@
       <%= f.input :gender, :label => "Gender", :collection => %w[Female Male Nonbinary Genderfluid] %>
       <%= f.input :city %>
       <%= f.input :price %>
-      <%= f.input :image_url %>
+      <%= f.input :photos, as: :file, input_html: { multiple: false } %>
     </div>
     <div class="third">
       <%= f.input :description %>
