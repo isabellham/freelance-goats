@@ -1,8 +1,23 @@
 <h1>Booking Details</h1>
-<h2>Congratulations! You have successfully booked <%= @booking.goat.name %></h2>
 
-<% @length = (@booking.end_date - @booking.start_date).to_i   %>
+<div class='container-confirmation'>
+  <div class='card-confirmation'>
+    <h2>Congratulations! You have successfully booked <strong><%= @booking.goat.name %></strong></h2>
+    <br>
+      <div class="container-img-goat">
+        <%= cl_image_tag(@booking.goat.photo.key, :alt=>"Goat picture", :class=>"img-confirmation") %>
+      </div>
+    <br>
+    <% @length = (@booking.end_date - @booking.start_date).to_i   %>
 
-<h3>Your booking on <%= @booking.start_date %> is for <%= @length %> days</h3>
-<h3>The total cost of your booking is € <%= @length * @booking.goat.price %></h3>
-<h3> Your Booking Number is <%= @booking.id %></h3>
+    <h3>Your booking on <strong><%= @booking.start_date %>,</strong> is for <strong><%= pluralize @length, 'day' %></strong></h3>
+    <br>
+    <h3>The total cost of your booking is € <strong><%= @length * @booking.goat.price %></strong></h3>
+    <br>
+    <h3> Your Booking Number is <strong><%= @booking.id %></strong></h3>
+    <br>
+    <div class="btn" id="btn-all-goats">
+      <a href="/dashboard"><span>Back to Bookings</span></a>
+    </div>
+  </div>
+</div>
