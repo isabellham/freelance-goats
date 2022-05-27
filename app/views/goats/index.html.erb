@@ -19,7 +19,11 @@
     <%= link_to goat_path(goat) do %>
       <div class="card">
         <div class="container-img-goat">
-          <%= cl_image_tag(goat.photo.key, :alt=>"Goat picture", :class=>"img-goat") %>
+          <% if goat.photo.attached? %>
+            <%= cl_image_tag(goat.photo.key, :alt=>"Goat picture", :class=>"img-goat") %>
+          <% else %>
+            <%= image_tag('placeholder-goat.jpg', :alt=>"Goat picture", :class=>"img-goat") %>
+          <% end %>
         </div>
         <div class="container-goats">
           <div class="goat-card-header">
