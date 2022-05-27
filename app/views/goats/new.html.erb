@@ -5,7 +5,7 @@
   <%= simple_form_for [@goat] do |f| %>
     <div class="third">
       <%= f.input :name%>
-      <%= f.input :goattype, :label => "Goattype", :collection => %w[Party Cuddle Yoga Lawn-Mower Service-Goat Youdontwannaknow] %>
+      <%= f.input :goattype, :label => "Goat Type", :collection => ["Party Goat", "Cuddle Goat", "Yoga Goat", "Lawn Mower", "Service Goat", "Flexible"] %>
       <%= f.input :breed %>
     </div>
     <div class="third">
@@ -18,7 +18,7 @@
       <%= f.input :description %>
     </div>
     <div class="third">
-      <%= f.submit "Share the goat with the world!", class: "btn-book-goat", id: "new-goat"%>
+      <%= f.submit "Share the goat with the world", class: "btn-book-goat", id: "new-goat"%>
     </div>
   <% end %>
   </div>
