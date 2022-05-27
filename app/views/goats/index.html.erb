@@ -1,15 +1,16 @@
 <div class="container-h1">
-  <h1>We found some nice freelance goats for you</h1>
+  <h1 id="h1-goat-index">We found some nice freelance goats for you</h1>
 </div>
 
 <div class="container-search">
-  <%= form_tag goats_path, method: :get, class: "d-flex" do %>
+  <%= form_tag goats_path, method: :get, class: "d-flex", id: "search-bar" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Search for you favourite goat type (party, cuddle, yoga, etc...)"
+      placeholder: "Search for you favourite goat type (party, cuddle, yoga, etc...)",
+      id: "search-field"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn-book-goat" %>
   <% end %>
 </div>
 
