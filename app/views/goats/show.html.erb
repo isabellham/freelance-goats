@@ -32,17 +32,19 @@
     </div>
   </div>
 
-  <div class='container-booking'>
-    <h3>Book this Goat</h3>
-    <div class='booking-form'>
-      <%= simple_form_for([@goat, @booking], data: {turbo: false}) do |f| %>
-        <%= f.input :start_date, as: :date, html5: true %>
-        <%= f.input :end_date, as: :date, html5: true  %>
-        <div class="form-wrapper">
-          <h4>€<%= @goat.price %> <span id="per-day">per day</span></h4>
-          <%= f.button :submit, class: "btn-book-goat" %>
-        </div>
-      <% end %>
+  <% unless current_user == @goat.user %>
+    <div class='container-booking'>
+      <h3>Book this Goat</h3>
+      <div class='booking-form'>
+        <%= simple_form_for([@goat, @booking], data: {turbo: false}) do |f| %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true  %>
+          <div class="form-wrapper">
+            <h4>€<%= @goat.price %> <span id="per-day">per day</span></h4>
+            <%= f.button :submit, class: "btn-book-goat" %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
