@@ -1,24 +1,111 @@
-.container-main {
-  display: flex;
+.container-img img {
+  height: 400px;
+  width: 1440px;
+  object-fit: cover;
+}
+
+.main-container {
+  display: inline-grid;
   flex-direction: row;
   justify-content: space-around;
-  padding: 24px;
+  // padding: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 24px 80px;
 }
 
-.container-img img {
-  height: 600px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 20px;
+.container-details {
+  display: flex;
+  grid-column: 1 / span 2;
+  flex-direction: column;
+  justify-content: space-around;
+  // padding: 24px 80px;
+  flex-basis: 2em;
 }
 
-.container-title {
-  padding-left: 200px;
-  padding-top: 30px;
+.container-details h1 {
+  font-family: 'Lilita One', cursive;
+  font-size: 4em;
+  color: #1d1717;
+  filter: drop-shadow(3px 3px #F15687);
 }
 
-.input [type="submit"] {
-  width: 200px;
-  height: 48px;
-  margin-bottom: 24px;
+.goat-details-header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px 0;
+}
+
+.goat-details-header h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 2px;
+}
+
+.goat-details-location {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+}
+
+.goat-details-location h2 {
+  font-size: 1.2em;
+  margin: 2px;
+}
+
+.goat-details-location img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.goat-details-description p {
+  padding: 32px 40px 32px 0;
+  font-size: 1.3em;
+}
+
+// BOOKING FORM
+.container-booking {
+  background-color: #e2e4e8;
+  grid-column: 3 / span 1;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.container-booking h3 {
+  font-family: 'Lilita One', cursive;
+  font-size: 2em;
+  color: #1d1717;
+  text-transform: uppercase;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.form-wrapper h4 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#per-day {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.container-booking input {
+  margin-left: 0;
+}
+
+.container-booking .form-label {
+  padding-left: 6px;
 }
